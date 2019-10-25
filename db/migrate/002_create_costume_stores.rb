@@ -1,13 +1,13 @@
 # Create your costume_stores migration here
-class CreateCostumeStore < ActiveRecord::Migration[4.2]
+class CreateCostumeStores < ActiveRecord::Migration[4.2]
 
   def change
     create_table :costume_stores do |store|
       store.string :name
       store.string :location
       store.integer :costume_inventory
-      store.integer :number_of_employees
-      store.boolean :still_in_business?
+      store.integer :num_of_employees
+      store.boolean :still_in_business
       store.datetime :opening_time
       store.datetime :closing_time
     end
