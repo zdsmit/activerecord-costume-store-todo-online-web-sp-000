@@ -5,5 +5,21 @@
 # 002_create_costumes.rb becomes class CreateCostumes
 
 # Define a change method in which to do the migration
-# In this change method, create columns with the correct names and 
+# In this change method, create columns with the correct names and
 # value types according to the spec
+
+class CreateCostumes < ActiveRecord::Migration[4.2]
+
+  def change
+    create_table :costumes do |costume|
+      costume.text :name
+      costume.float :price
+      costume.integer :size
+      costume.string :image_url
+      costume.datetime :created_at
+      costume.datetime :updated_at
+    end
+  end
+
+
+end
